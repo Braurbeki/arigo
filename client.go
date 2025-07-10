@@ -620,6 +620,12 @@ func (c *Client) ChangeOptions(gid string, options Options) error {
 	return c.rpcClient.Call(aria2proto.ChangeOptions, c.getArgs(gid, options), nil)
 }
 
+
+func (c *Client) ChangeOption(gid string, key string, value string) error {
+    options := map[string]string{key: value}
+    return c.rpcClient.Call(aria2proto.ChangeOptions, c.getArgs(gid, options), nil)
+}
+
 // GetGlobalOptions returns the global options.
 // Note that this method does not return options which have no default value and have not been set on the command-line,
 // in configuration files or RPC methods.
