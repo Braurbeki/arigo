@@ -8,10 +8,10 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/Braurbeki/arigo/internal/pkg/jsonrpc"
 	"github.com/Braurbeki/arigo/internal/pkg/wsrpc"
 	"github.com/Braurbeki/arigo/pkg/aria2proto"
 	"github.com/cenkalti/rpc2"
-	"github.com/cenkalti/rpc2/jsonrpc"
 	"github.com/gorilla/websocket"
 )
 
